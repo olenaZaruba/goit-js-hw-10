@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #0d161b;
+}
+
+h1 {
+  margin: 0;
+}
+
+.breed-select {
+  max-width: 500px;
+  margin: auto;
+}
+.cat-info {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #e5f3f2;
+  border: 1px solid #0d161b;
+}
+
+.box-img {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+}
+
+.loader {
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  background-image: radial-gradient(
+      circle 25px at 25px 25px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+    radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+    linear-gradient(#fff 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  position: absolute;
+  border: 15px solid transparent;
+  border-top-color: #ff3d00;
+  box-sizing: border-box;
+  animation: fadePush 1s linear infinite;
+}
+.loader::before {
+  content: '';
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff3d00;
+  box-sizing: border-box;
+  animation: fadePush 1s linear infinite;
+}
+
+@keyframes fadePush {
+  0% {
+    transform: translate(-50%, -15px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 15px);
+    opacity: 0;
+  }
+}
