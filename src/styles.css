@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .is-hidden {
-  position: absolute;
+  /* position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -12,7 +12,10 @@
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  overflow: hidden; */
+
+  opacity: 0;
+  visibility: hidden;
 }
 
 img {
@@ -36,8 +39,8 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  background-color: #e5f3f2;
-  border: 1px solid #0d161b;
+  /* background-color: #e5f3f2;
+  border: 1px solid #0d161b; */
 }
 
 .box-img {
